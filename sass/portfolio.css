@@ -149,13 +149,13 @@ body {
   fill: rgb(33, 150, 243);
 }
 
-.is__hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.backdrop.is__hidden .modal {
+.backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 }
 

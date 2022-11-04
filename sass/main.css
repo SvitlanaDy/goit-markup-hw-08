@@ -17,23 +17,28 @@
   --tarnsition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-:root {
-  --Main-text-color: #757575;
-  --main-title-color: #212121;
-  --main-hover-color: #2196f3;
-  --main-white-color: #ffffff;
-  --main-black-color: #000000;
-  --main-background-color: #2f303a;
-  --main-footer-adress-color: rgba(255, 255, 255, 0.6);
-  --second-background-color: #f5f5f5;
-  --logoweb-color: #2196f3;
-  --btn-cover-color: #188ce8;
-  --hero-background-color: #c4c4c4;
-  --soc-icon-color: #afb1b8;
-  --typical-line-height: 1.14;
-  --main-font: "Roboto", sans-serif;
-  --transition-duration: 250ms;
-  --tarnsition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.examples, .customers, .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.btn__subscribe, .customers__soc-link, .wrap__text, .benefits__link, .check-text span, .modal-btn {
+  display: flex;
+  align-items: center;
+}
+
+.visually__hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
 }
 
 p,
@@ -72,16 +77,6 @@ a {
   text-decoration: none;
 }
 
-.examples, .customers, .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.btn__subscribe, .customers__soc-link, .wrap__text, .benefits__link, .check-text span, .modal-btn {
-  display: flex;
-  align-items: center;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--main-white-color);
@@ -94,20 +89,6 @@ body {
 
 .link {
   text-decoration: none;
-}
-
-.visually__hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: -1px;
 }
 
 .container {
@@ -168,13 +149,13 @@ body {
   fill: rgb(33, 150, 243);
 }
 
-.is__hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.backdrop.is__hidden .modal {
+.backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 }
 
