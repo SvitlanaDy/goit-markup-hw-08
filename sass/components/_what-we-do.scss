@@ -3,11 +3,14 @@
   }
   .what-we-do__list {
     display: flex;
+    // flex-wrap:wrap;
     gap: 30px;
+   
   }
   
   .wrap {
     position: relative;
+  
     
   }
   .wrap__text {
@@ -27,11 +30,19 @@
     padding: 27px 10px; 
     color: #ffffff;
     
-  //   display: flex;
-  //  align-items: center;
-  @extend %align-list;
+    display: flex;
+   align-items: center;
+ 
+  
+  // @extend %align-list;
     justify-content: center;
+    
   }
+// .what-we-do__item{
+//   // width: 100%;
+//   // @media screen and (min-width:320px)
+//   // {width: 1199px;}
+// }
   
   
   

@@ -1,13 +1,16 @@
 
-.examples-buttons {
+.examples__buttons {
     display: flex;
     justify-content: center;
     gap: 8px;
     min-width: 575px;
+   
+  }
+  .menu__example{
     margin-bottom: 54px;
   }
   
-  .about-button-examples {
+  .about__button-examples {
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -30,30 +33,30 @@
     }
   }
   
-  .about-button-examples {
+  .about__button-examples {
     transition: color var(--transition-duration) var(--tarnsition-timing-function),
       background-color var(--transition-duration)
         var(--tarnsition-timing-function),
       box-shadow var(--transition-duration) var(--tarnsition-timing-function);
   }
   
-  .examples-list {
+  .examples__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
   }
-  .examples-item {
+  .examples__item {
     width: calc( 100% - 90px ) / 3;
   }
   
-  .examples-text-content {
+  .examples__text-content {
     padding: 20px 24px;
     border-bottom: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
   }
   
-  .examples-spots-titles {
+  .examples__spots-titles {
     color: var(--main-title-color);
     font-weight: 700;
     font-size: 18px;
@@ -61,7 +64,7 @@
     letter-spacing: 0.06em;
     margin-bottom: 4px;
   }
-  .examples-spots-text {
+  .examples__spots-text {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
@@ -69,7 +72,7 @@
   }
   
  
-  .examples-link {
+  .examples__link {
     display: block;
     transition: box-shadow var(--transition-duration)
       var(--tarnsition-timing-function);
@@ -81,12 +84,12 @@
       }
   }
   
-  .examples-top-wrap {
+  .examples__top-wrap {
     position: relative;
     overflow: hidden;
   }
   
-  .examples-top-text {
+  .examples__top-text {
     position: absolute;
     top: 0;
     left: 0;
@@ -103,10 +106,10 @@
     transition: transform var(--transition-duration)
       var(--tarnsition-timing-function);
 
-      .examples-link:hover & {
+      .examples__link:hover & {
         transform: translateY(0);
       }
-      .examples-link:focus & {
+      .examples__link:focus & {
         transform: translateY(0);
       }
   }

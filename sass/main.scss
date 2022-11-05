@@ -1,17 +1,13 @@
 @import "./utils/vars";
 @import "./utils/placeholders";
+@import "./utils/mixin";
 @import "./utils/hidden";
 @import "./base/reset";
-
 @import "./base/common";
-
 @import "./components/container";
-
 @import "./components/section";
 @import "./components/modal";
-
 @import "./components/hero";
-
 @import "./components/advantages";
 @import "./components/what-we-do";
 @import "./components/our-team";
