@@ -11,8 +11,9 @@
   
   .customers__title {
     margin-bottom: 30px;
-    @media screen and (min-width: 320px) {
- margin-bottom:50px;
+
+  @include desktop{
+    margin-bottom:50px;
   }
 }
   

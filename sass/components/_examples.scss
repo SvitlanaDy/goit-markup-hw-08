@@ -1,9 +1,15 @@
 
 .examples__buttons {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
+    justify-content:flex-start;
+    
     gap: 8px;
-    min-width: 575px;
+    // min-width: 575px;
+    flex-wrap:wrap;
+    padding-right: 120px;
+    min-width: 330px;
+    height: 91px;
    
   }
   .menu__example{
@@ -41,12 +47,20 @@
   }
   
   .examples__list {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
     gap: 30px;
   }
   .examples__item {
-    width: calc( 100% - 90px ) / 3;
+    // width: calc( 100% - 90px ) / 3;
+    width: 100%;
+    @media screen and (min-width:480px)
+    {width: calc(( 100% - 30px ) / 1);}
+    @media screen and (min-width:768px)
+    {width: calc(( 100% - 60px ) / 2);}
+    @media screen and (min-width:1199px)
+    {width: calc(( 100% - 90px ) / 3);}
+    
   }
   
   .examples__text-content {

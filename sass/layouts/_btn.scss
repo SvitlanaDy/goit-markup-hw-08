@@ -1,19 +1,35 @@
 .button {
-    min-width: 216px;
-    height: 50px;
-    padding: 350px 692px 200px 692px;
+  
+    max-width: 160px;
+    height: 40px;
+   
+    padding: 232px 140px 118px 140px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     
     background-color: rgba(0, 0, 0, 0.15);
+    @include mobile {
+      min-width: 200px;
+      height: 50px;
+      padding: 252px 145px 138px 145px;
+    }
+    @include tablet {
+      min-width: 200px;
+      height: 50px;
+      padding: 252px 145px 138px 145px;
+    }
+    @include desktop{
+      padding: 350px 692px 200px 692px;
+      min-width: 216px;
+    }
   }
 
   .btn {
     font-family: inherit;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
+    font-size: 12px;
+    line-height: 1.76;
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--main-white-color);
@@ -21,11 +37,26 @@
     background-color: var(--main-hover-color);
     border-color: transparent;
     border-radius: 4px;
-    padding: 10px 32px;
+    
+    padding: 8px 20px;
 
     &:hover,
     &:focus {
     background-color: var(--btn-cover-color);
+  }
+  @include mobile {
+    font-size: 16px;
+    line-height: 1.88;
+    padding: 10px 24px;
+  }
+  @include tablet {
+    font-size: 16px;
+    line-height: 1.88;
+    padding: 10px 24px;
+  }
+
+  @include desktop{
+    padding: 10px 32px;
   }
   }
 
