@@ -5,7 +5,7 @@
   .header__container {
     display: flex;
     align-items: center;
-    gap:16px;
+    // gap:16px;
    
     border-bottom: 1px #ececec;
     }
@@ -37,6 +37,7 @@
   .menu {
     // display: flex;
     display:none;
+   
 
     @include tablet {
       display: flex;
@@ -99,6 +100,7 @@
  background-color: var(--main-white-color);
  border:none;
  margin-left: auto;
+ margin-right: auto;
 
   @include tablet {
     display: none;
@@ -133,8 +135,8 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: auto;
-    padding-top: 16px;
-    padding-left: 16px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
 
@@ -147,12 +149,13 @@
 
   background-color: transparent;
   border: none;
-  transition: fill(--tarnsition-timing-function --transition-duration --);
+  transition: fill(--tarnsition-timing-function --transition-duration --);}
   
-  &:hover {
+ .menu-close-mob-btn:hover,
+ .menu-close-mob-btn:focus {
     fill: var(--main-hover-color)
   }
-}
+
 .mob-menu__top{
   margin-bottom: 120px;
 }
