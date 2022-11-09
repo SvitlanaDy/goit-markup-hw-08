@@ -26,6 +26,9 @@
   
     @include tablet {
       margin-right: 93px;
+      padding-top: 26px;
+      padding-bottom: 26px;
+      padding-left:15px;
     }
   }
   .navigation {
@@ -44,6 +47,7 @@
       align-items: center;
       gap: 10px;
       margin-left: auto;
+      
     }
     @include desktop {
       flex-direction: row;
@@ -54,6 +58,9 @@
  
   .menu__item {
     position: relative;
+  }
+  .menu__item:not(:last-child){
+margin-right: 32px;
   }
   .menu__link {
     font-weight: 500;
@@ -91,21 +98,25 @@
       display: flex;
       align-items: center;
     }
+  
   }
 
 
 
 .menu__open-btn{
-  margin-left:auto;
+  
  background-color: var(--main-white-color);
  border:none;
  margin-left: auto;
  margin-right: auto;
 
+padding-left:276px;
+
   @include tablet {
     display: none;
   }
 }
+
 
 .social-net{
   font-size:18px;
@@ -170,13 +181,15 @@
   &:focus {
     color: var(--main-hover-color);
   }
+  
 }
 .mob-menu__item{
   color: #212121;
+
 }
 // .mob-menu__item:not(:last-child)
 // {
-//   margin-bottom: 32px;
+//   margin-: 32px;
 // }
 .mob-menu__list{
   display: flex;
