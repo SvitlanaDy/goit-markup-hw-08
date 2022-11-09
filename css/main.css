@@ -235,8 +235,8 @@ body {
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   background-color: var(--main-white-color);
   position: absolute;
   top: 50%;
@@ -245,6 +245,12 @@ body {
   transition: transform 300ms linear;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.1411764706), 0px 1px 3px 0px rgba(0, 0, 0, 0.1215686275);
   padding: 40px;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-height: 581px;
+    width: 528px;
+  }
 }
 
 .modal__btn {
@@ -281,16 +287,22 @@ body {
 }
 
 .modal__title {
-  max-width: 448px;
-  height: 23px;
+  width: 100%;
   font-weight: 700;
   font-size: 20px;
   text-align: center;
   font-size: 20 px;
   margin-bottom: 12px;
-  line-height: 1.17;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.17;
+    height: 23px;
+    text-align: center;
+  }
 }
 
 .modal__field {
@@ -370,9 +382,17 @@ body {
   color: #757575;
   display: flex;
   position: relative;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
+  line-height: 1.17;
+  width: 100%;
   letter-spacing: 0.03em;
+  justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .check__text {
+    top-size: 14px;
+  }
 }
 .check__text span {
   width: 16px;
