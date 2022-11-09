@@ -13,10 +13,4 @@
     @include tablet { width: 768px;}
     @include desktop { width: 1200px;}
   }
-  .mob__container{
-    width: 100%;
-    padding-top:48px;
-  padding-bottom: 48px;
-  padding-left:40px;
-  padding-right: 25px;
-  }
+ 

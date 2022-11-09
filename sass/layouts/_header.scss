@@ -28,11 +28,11 @@
       margin-right: 93px;
     }
   }
-//   .navigation {
-//     display: flex;
-//    align-items: center;
+  .navigation {
+    display: flex;
+   align-items: center;
    
-//   }
+  }
 
   .menu {
     // display: flex;
@@ -51,41 +51,46 @@
     }
   }
  
-//   .menu__item {
-//     position: relative;
-//   }
-//   .menu__link {
-//     font-weight: 500;
-//     font-size: 14px;
-//     line-height: var(--typical-line-height);
-//     letter-spacing: 0.02em;
-//     color: var(--main-title-color);
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-//     display: block;
+  .menu__item {
+    position: relative;
+  }
+  .menu__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: var(--typical-line-height);
+    letter-spacing: 0.02em;
+    color: var(--main-title-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: block;
 
-//     &:hover,
-//     &:focus {
-//       color: var(--main-hover-color);
-//     }
-//     &.current {
-//       color: var(--main-hover-color);
-//       &::after {
-//         content: "";
-//         display: block;
-//         position: absolute;
-//         bottom: -1px;
-//         width: 100%;
-//         height: 4px;
-//         border-radius: 2px;
-//         background-color: var(--logoweb-color);
-//       }
-//     }
-//   }
+    &:hover,
+    &:focus {
+      color: var(--main-hover-color);
+    }
+    &.current {
+      color: var(--main-hover-color);
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--logoweb-color);
+      }
+    }
+   
+  }
  
-//   .menu__link {
-//     transition: color var(--transition-duration) var(--tarnsition-timing-function);
-//   }
+  .menu__link {
+    transition: color var(--transition-duration) var(--tarnsition-timing-function);
+    @include desktop {
+      display: flex;
+      align-items: center;
+    }
+  }
 
 
 
@@ -109,7 +114,10 @@
 }
 
 
-.mob-menu {
+.mob__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   background-color:var(--main-white-color);
@@ -118,18 +126,21 @@
   z-index: 1;
   padding-top: 48px;
   padding-bottom: 48px;
+  padding-left: 40px;
   > .mob__container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: auto;
+    padding-top: 16px;
+    padding-left: 16px;
   }
 }
 
 .menu__close-btn{
-  // display:block;
-  // margin-left: auto;
+  display:block;
+  margin-left: auto;
   position: absolute;
   right: 15px;
   top: 10px;
@@ -141,6 +152,9 @@
   &:hover {
     fill: var(--main-hover-color)
   }
+}
+.mob-menu__top{
+  margin-bottom: 120px;
 }
 .mob-menu__link{
   font-weight: 500;
@@ -154,9 +168,9 @@
     color: var(--main-hover-color);
   }
 }
-// .mob-menu__item{
-  
-// }
+.mob-menu__item{
+  color: #212121;
+}
 // .mob-menu__item:not(:last-child)
 // {
 //   margin-bottom: 32px;
@@ -210,6 +224,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content:flex-start ;
 }
 .content__socials:not(:last-child){
   border-right: 1px solid rgba(33, 33, 33, 0.2);
@@ -229,7 +244,19 @@
     // display: flex;
     display:none;
      align-items: center;
+
+     @include tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-left: auto;
+    }
   
+    @include desktop {
+      flex-direction: row;
+      gap: 30px;
+      align-items: center;
+    }
 
     }
   
@@ -237,9 +264,9 @@
     margin-left: auto;
   }
 
-  .adress__email{
-    margin-right: 50px;
-  }
+  // .adress__email{
+  //   margin-right: 50px;
+  // }
 
   .adress__email--link {
     font-weight: 500;
@@ -247,8 +274,7 @@
     // line-height: var(--typical-line-height);
     letter-spacing: 0.02em;
     color: var(--Main-text-color);
-    padding-top: 32px;
-    padding-bottom: 32px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,6 +283,10 @@
     &:focus {
       color: var(--btn-cover-color);
     }
+    @include desktop{
+      padding-top: 32px;
+      padding-bottom: 32px;
+     }
   }
   .adress__email--link  {
     transition: color var(--transition-duration) var(--tarnsition-timing-function);
@@ -270,13 +300,16 @@
     color: var(--Main-text-color);
      display: flex;
      align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+   
     justify-content: center;
     
     &:hover,
     &:focus {
     color: var(--btn-cover-color);
+   }
+   @include desktop{
+    padding-top: 32px;
+    padding-bottom: 32px;
    }
   }
   .tel__link{

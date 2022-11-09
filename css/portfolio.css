@@ -108,14 +108,6 @@ body {
   }
 }
 
-.mob__container {
-  width: 100%;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
-  padding-right: 25px;
-}
-
 .hero {
   text-align: center;
   background: var(--hero-background-color);
@@ -868,6 +860,11 @@ background-color: rgba(0, 0, 0, 0.15);
   }
 }
 
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
 .menu {
   display: none;
 }
@@ -883,6 +880,47 @@ background-color: rgba(0, 0, 0, 0.15);
   .menu {
     flex-direction: row;
     gap: 30px;
+    align-items: center;
+  }
+}
+
+.menu__item {
+  position: relative;
+}
+
+.menu__link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: var(--typical-line-height);
+  letter-spacing: 0.02em;
+  color: var(--main-title-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
+}
+.menu__link:hover, .menu__link:focus {
+  color: var(--main-hover-color);
+}
+.menu__link.current {
+  color: var(--main-hover-color);
+}
+.menu__link.current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--logoweb-color);
+}
+
+.menu__link {
+  transition: color var(--transition-duration) var(--tarnsition-timing-function);
+}
+@media screen and (min-width: 1200px) {
+  .menu__link {
+    display: flex;
     align-items: center;
   }
 }
@@ -906,7 +944,10 @@ background-color: rgba(0, 0, 0, 0.15);
   color: rgb(33, 150, 243);
 }
 
-.mob-menu {
+.mob__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   background-color: var(--main-white-color);
@@ -915,16 +956,21 @@ background-color: rgba(0, 0, 0, 0.15);
   z-index: 1;
   padding-top: 48px;
   padding-bottom: 48px;
+  padding-left: 40px;
 }
-.mob-menu > .mob__container {
+.mob__menu > .mob__container {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
+  padding-top: 16px;
+  padding-left: 16px;
 }
 
 .menu__close-btn {
+  display: block;
+  margin-left: auto;
   position: absolute;
   right: 15px;
   top: 10px;
@@ -934,6 +980,10 @@ background-color: rgba(0, 0, 0, 0.15);
 }
 .menu__close-btn:hover {
   fill: var(--main-hover-color);
+}
+
+.mob-menu__top {
+  margin-bottom: 120px;
 }
 
 .mob-menu__link {
@@ -946,6 +996,10 @@ background-color: rgba(0, 0, 0, 0.15);
 }
 .mob-menu__link:hover, .mob-menu__link:focus {
   color: var(--main-hover-color);
+}
+
+.mob-menu__item {
+  color: #212121;
 }
 
 .mob-menu__list {
@@ -989,6 +1043,7 @@ background-color: rgba(0, 0, 0, 0.15);
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: flex-start;
 }
 
 .content__socials:not(:last-child) {
@@ -1009,13 +1064,24 @@ background-color: rgba(0, 0, 0, 0.15);
   display: none;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .adress {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .adress {
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+  }
+}
 
 .adress__list {
   margin-left: auto;
-}
-
-.adress__email {
-  margin-right: 50px;
 }
 
 .adress__email--link {
@@ -1023,14 +1089,18 @@ background-color: rgba(0, 0, 0, 0.15);
   font-size: 14px;
   letter-spacing: 0.02em;
   color: var(--Main-text-color);
-  padding-top: 32px;
-  padding-bottom: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .adress__email--link:hover, .adress__email--link:focus {
   color: var(--btn-cover-color);
+}
+@media screen and (min-width: 1200px) {
+  .adress__email--link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .adress__email--link {
@@ -1044,12 +1114,16 @@ background-color: rgba(0, 0, 0, 0.15);
   color: var(--Main-text-color);
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   justify-content: center;
 }
 .tel__link:hover, .tel__link:focus {
   color: var(--btn-cover-color);
+}
+@media screen and (min-width: 1200px) {
+  .tel__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .tel__link {
