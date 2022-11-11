@@ -1513,6 +1513,15 @@ background-color: rgba(0, 0, 0, 0.15);
   }
 }
 
+.content__list {
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .content__list {
+    justify-content: center;
+  }
+}
+
 .footer__soc-title {
   color: var(--main-white-color);
   font-size: 14px;
