@@ -7,9 +7,15 @@
     gap: 8px;
     // 
     flex-wrap:wrap;
-    padding-right: 120px;
+    row-gap: 14px;
+    column-gap: 8px;
+    // padding-right: 120px;
     min-width: 330px;
     height: 91px;
+    @include tablet{
+      min-width: 575px;
+      justify-content: center;
+    }
     @include desktop{
       min-width: 575px;
       justify-content: center;
@@ -51,9 +57,10 @@
   }
   
   .examples__list {
-    // display: flex;
-    // flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
     @include tablet{
       display: flex;
       flex-wrap: wrap;
@@ -65,21 +72,27 @@
   }
   .examples__item {
     // width: calc( 100% - 90px ) / 3;
+   
     width: 100%;
     @media screen and (min-width:480px)
     {width: calc(( 100% - 30px ) / 1);}
     @media screen and (min-width:768px)
-    {width: calc(( 100% - 60px ) / 2);}
+    {width: calc(( 100% - 30px ) / 2);}
     @media screen and (min-width:1199px)
-    {width: calc(( 100% - 90px ) / 3);}
+    {width: calc(( 100% - 60px ) / 3);}
     
   }
   
   .examples__text-content {
+    flex-grow: 1;
     padding: 20px 24px;
     border-bottom: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
+    @include desktop{
+      flex-grow: 1;
+    }
+    
   }
   
   .examples__spots-titles {
@@ -99,7 +112,10 @@
   
  
   .examples__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     transition: box-shadow var(--transition-duration)
       var(--tarnsition-timing-function);
 
@@ -108,11 +124,13 @@
         box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
           0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
       }
+    
   }
   
   .examples__top-wrap {
     position: relative;
     overflow: hidden;
+
   }
   
   .examples__top-text {

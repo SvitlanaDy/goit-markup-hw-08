@@ -71,7 +71,7 @@
     // padding-bottom: 47px;
     padding-top: 60px;
     padding-bottom: 30px;
-    @media screen and (min-width:768px){
+    @include desktop{
       padding-top:94px;
       padding-bottom:47px;
     }
@@ -82,7 +82,7 @@
     padding-top: 30px;
     padding-bottom: 60px;
    
-    @media screen and (min-width:768px){
+    @include desktop{
       padding-top:47px;
       padding-bottom:94px;
     }
@@ -110,8 +110,11 @@
     background-color: var(--second-background-color);
     padding-top: 60px;
     padding-bottom: 60px;
-    // padding-top: 94px;
-    // padding-bottom: 94px;
+    
+    @include desktop {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
   }
 
   .customers {
@@ -121,7 +124,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  @media screen and (min-width: 768px) {
+  @include desktop {
     padding-top: 94px;
    padding-bottom: 94px;
   }
@@ -129,7 +132,7 @@
 .examples {
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (min-width: 768px) {
+  @include desktop {
     padding-top: 94px;
    padding-bottom: 94px;
   }

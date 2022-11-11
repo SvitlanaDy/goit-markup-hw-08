@@ -23,7 +23,7 @@
   padding: 40px;
   @include desktop {
     min-height: 581px;
-    width: 528px;
+    max-width: 528px;
   }
  
 }
@@ -165,7 +165,8 @@
   letter-spacing: 0.03em;
 justify-content: center;
 @include desktop{
-  top-size:14px;
+  font-size:14px;
+  width: 100%;
 }
 
   span {
