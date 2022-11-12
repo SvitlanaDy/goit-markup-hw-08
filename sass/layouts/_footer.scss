@@ -21,30 +21,28 @@
       justify-content: space-around; 
       // margin-bottom: -60px;
     }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      
+       margin-bottom:60px;
+    }
+   
   }
   .left{
     
     display: flex;
     align-items: center;
     flex-direction: column;
-    // margin-bottom: 60px;
-    // @media screen and (min-width: 768px) and (max-width: 1200px) {
-    //   .left {
-    //     padding-right:165px;
-    //   }
-    // }
-  //  @include tablet{
-  //   margin-bottom: -60px;
-  //  }
+   
     @include desktop{
      display: flex;
       
       align-items: flex-start;
-      
-     
-     
       }
-
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+       
+         margin-bottom:60px;
+        }
+      
   }
   .footer__adress-section{
     text-align: center;
@@ -145,7 +143,7 @@
   
   .middle {
   
-    // margin-bottom: 60px;
+   
     text-align: center;
     @include tablet{
       
@@ -155,8 +153,17 @@
    
      @include desktop{
       margin-left: 70px;
-      // margin-bottom: -60px;
+      
      }
+     @media screen and (min-width: 320px) and (max-width: 767px) {
+       
+      margin-bottom:60px;
+     }
+    //  @media screen and (min-width: 320px) and (max-width: 767px) {
+    //   .middle{
+    //    margin-bottom:60px;
+    //   }
+    // }
     }
     
   .content__list{
@@ -261,8 +268,11 @@
     // margin-right: 15px;
     // margin-left:15px;
     box-shadow:rgba(0, 0, 0, 0.15);
-    margin-bottom: 20px;
     
+    @media screen and (min-width: 320px) and (max-width: 1199px) {
+       
+      margin-bottom: 20px;
+     }
 
     &::placeholder {
       font-size: 16px;
