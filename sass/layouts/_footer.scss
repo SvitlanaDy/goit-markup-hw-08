@@ -9,7 +9,7 @@
     font-style: normal;
   }
   .footer_left-middle{
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
     @include tablet {
       display: flex;
       align-items: baseline;
@@ -19,7 +19,7 @@
       display: flex;
       align-items: baseline;
       justify-content: space-around; 
-      margin-bottom: -60px;
+      // margin-bottom: -60px;
     }
   }
   .left{
@@ -27,15 +27,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
     // @media screen and (min-width: 768px) and (max-width: 1200px) {
     //   .left {
     //     padding-right:165px;
     //   }
     // }
-   @include tablet{
-    margin-bottom: -60px;
-   }
+  //  @include tablet{
+  //   margin-bottom: -60px;
+  //  }
     @include desktop{
      display: flex;
       
@@ -285,7 +285,7 @@
      
      width: 358px;
       margin-right: 12px;
-      margin-bottom: -20px;
+      // margin-bottom: -20px;
     }
   
    
